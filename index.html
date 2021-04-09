@@ -28,9 +28,9 @@
    <div class="position-relative text-right">
       <!-- <div class="position-absolute top-50 end-50 translate-middle-x"> -->
         <div class="btn-group" role="group">
-          <button type="button" class="btn btn-primary">Save</button>
-          <button type="button" class="btn btn-secondary">Preview</button>
-          <button type="button" class="btn btn-danger">Send</button>
+          <button id="save-button" onclick="onSaveButtonClick()" type="button" class="btn btn-primary">Save</button>
+          <button id="preview-button" onclick="onPreviewButtonClick()" type="button" class="btn btn-secondary">Preview</button>
+          <button id="send-button" onclick="onSendButtonClick()" type="button" class="btn btn-danger">Send</button>
      <!-- </div> -->
     <!-- </div> -->
   </div>
@@ -38,19 +38,40 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md">
+    <div class="col-lg">
       <h>Email adresses</h>
       <div class="input-group mb-3">
         <span class="input-group-text">@</span>
         <input type="text" class="form-control" placeholder="afik@pw.com">
       </div>
     </div>
-    <div class="col-md">
-      <h>Rss url</h>
+    <div class="col-lg">
+      <h>RSS url add</h>
       <div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="tvn.pl">
+  <input id="rssUrlToAdd" type="text" class="form-control" placeholder="tvn.pl">
   <div class="input-group-append">
-    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Add</button>
+    <button onclick="onAddButtonClick()" class="btn btn-outline-secondary" type="button" id="addButton">Add</button>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg">
+      <h>text e-mail</h>
+      <div class="form-floating mb-3">
+        <textarea id="textarea" class="form-control" placeholder="parser rss url"></textarea>
+      </div>
+    </div>
+    <div class="col-lg">
+      
+      <h>List RSS url </h>
+      <div id="listaRSS">
+        <!-- <input type="text" readonly class="form-control-plaintext" value=""> -->
+      </div>
+      
   </div>
 </div>
     </div>
@@ -58,7 +79,6 @@
 </div>
 
 
-
-  <!-- <script src="js/scripts.js"></script> -->
+  <script src="script.js"></script>
 </body>
 </html>
